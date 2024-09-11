@@ -58,7 +58,7 @@ public class BattleshipServiceTest {
         location1[2][0] = "B";
         location1[2][3] = "B";
         location1[3][4] = "B";
-        location1[4][4] = "B";
+        location1[4][3] = "B";
         ship.setLocationShip(location1);
 
         Ship ship2 = new Ship();
@@ -72,10 +72,10 @@ public class BattleshipServiceTest {
         location[4][1] = "B";
         ship2.setLocationShip(location);
 
-//        int damage = battleshipService.shot(ship, ship2);
+        int damage = battleshipService.shot(ship, ship2);
         int damage2 = battleshipService.shot(ship2, ship);
 
-//        Assertions.assertEquals(3, damage);
+        Assertions.assertEquals(3, damage);
         Assertions.assertEquals(3, damage2);
     }
 
