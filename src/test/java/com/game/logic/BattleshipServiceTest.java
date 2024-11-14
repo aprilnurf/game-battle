@@ -71,7 +71,6 @@ public class BattleshipServiceTest {
         location[3][4] = "B";
         location[4][1] = "B";
         ship2.setLocationShip(location);
-
         int damage = battleshipService.shot(ship, ship2);
         int damage2 = battleshipService.shot(ship2, ship);
 
