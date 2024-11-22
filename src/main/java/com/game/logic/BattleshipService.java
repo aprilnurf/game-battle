@@ -27,6 +27,7 @@ public class BattleshipService {
     public int shot(Ship ship, Ship targetShip) {
         String[] targets = ship.getTargetToEnemy().split(":");
         int count = 0;
+
         for (String target : targets) {
             String[] xy = target.split(",");
             int x = Integer.parseInt(xy[0]);
